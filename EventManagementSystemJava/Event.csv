@@ -1,0 +1,31 @@
+name,type,hostId,eventManagementId,date,time,venueId,eventCapacity,status
+Spring Gala,Gala,1,12,4/15/23,19:00,4,200,Done
+Tech Summit,Conference,6,12,5/10/23,9:30,21,300,Created
+Music Festival,Festival,7,13,6/22/23,15:00,22,500,InProgress
+Charity Auction,Auction,8,14,7/8/23,18:30,23,100,Created
+Wellness Workshop,Workshop,9,15,8/5/23,11:00,24,50,Done
+Art Exhibition,Exhibition,10,11,9/14/23,14:00,25,150,Requested
+Business Mixer,Networking,1,12,10/1/23,17:30,4,120,InProgress
+Science Fair,Fair,6,13,11/18/23,10:00,21,250,Managing
+Movie Night,Social,7,14,12/3/23,20:00,22,80,Requested
+Food Festival,Festival,8,15,1/14/24,12:30,23,300,InProgress
+Fashion Show,Show,9,2,2/22/24,16:45,24,180,Requested
+Coding Competition,Competition,10,11,3/8/24,14:00,25,100,Created
+Wedding Expo,Expo,1,13,4/20/24,11:00,4,200,Requested
+Cooking Class,Workshop,6,14,5/9/24,19:15,21,30,Done
+Outdoor Concert,Concert,7,15,6/18/24,18:00,22,400,Requested
+Tech Hackathon,Hackathon,8,12,7/6/24,9:00,23,150,InProgress
+Book Launch,Literary,9,11,8/11/24,13:45,24,80,Created
+Yoga Retreat,Retreat,10,12,9/25/24,8:30,25,50,Done
+Comedy Night,Comedy,1,13,10/10/24,20:30,4,120,Requested
+Wine Tasting,Tasting,6,14,11/14/24,17:00,21,75,Managing
+Career Fair,Fair,7,15,12/1/24,10:00,22,200,Done
+Artisan Market,Market,8,11,1/20/25,12:00,22,150,Requested
+Coding Workshop,Workshop,9,12,2/14/25,15:30,23,40,InProgress
+Travel Expo,Expo,10,13,3/9/25,9:45,24,180,Requested
+Dance Showcase,Showcase,1,14,4/22/25,16:00,25,100,Created
+Science Symposium,Symposium,6,14,5/14/25,14:15,4,120,Done
+Photography Workshop,Workshop,7,15,6/30/25,11:30,25,60,Requested
+Movie Marathon,Social,8,2,7/17/25,22:00,24,200,Created
+Tech Conference,Conference,9,2,8/10/25,10:45,23,300,Requested
+Music Jam Session,Music,10,11,9/5/25,19:30,22,80,InProgress
