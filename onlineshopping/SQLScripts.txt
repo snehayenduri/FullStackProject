@@ -1,0 +1,185 @@
+				
+"
+drop table customers;
+drop sequence customer_sequence;
+
+create table Customers(
+ customer_Id number(5) ,
+ customer_Name varchar2(10), 
+ email_address varchar2(20) unique,  
+ password varchar2(20) not null, 
+ door_No varchar2(20) not null, 
+ street varchar2(20), 
+ city varchar2(20), 
+ state varchar2(20), 
+ country varchar2(20), 
+ pincode number(10) not null,
+ mobile_Number number(10) unique,
+ constraint customer_pk primary key(customer_Id)
+);
+
+
+create sequence customer_sequence increment by 1 start with 1001;
+
+select * from customers;
+
+insert into Customers values(1001, 'Sheela', 'sheela@gmail.com', 'Sheela@123', '123-98', 'pk nagar','Hyderabad', 'Telangana', 'India', 500070, 8186889898);
+insert into Customers values(1002, 'Narayan', 'narayan@gmail.com', 'Narayan@123', '234', 'Mahape', 'Mumbai', 'Maharashtra', 'India', 400123, 9123184721);
+insert into Customers values(1003, 'Sreeja', 'sreeja@123', 'sreeja@gmail.com', '58/17-8', 'Tilak Nagar', 'Chennai', 'Tamil Nadu', 'India', 600902, 7983293487);
+insert into Customers values(1004, 'Vijay Bose', 'bose@456', 'vijaybose@gmail.com', '181', 'chadarghat', 'Hyderabad', 'Telangana', 'India', 500065, 6543209876);"				
+				
+				
+				
+PRODUCTS				
+				
+"drop table products
+
+select * from Products
+
+
+create table Products(
+ product_Id number(10),
+ product_Name varchar2(20) not null,
+ product_Image varchar2(50),
+ product_Brand varchar2(20),
+ Quantity number(10),
+ product_Cost number(10) not null,
+ category_Id number(10),
+ retailer_Id number(10),
+ constraint product_pk primary key(product_Id), 
+ constraint retailer_fk foreign key(retailer_Id) references retailers(retailer_id), 
+ constraint category_fk foreign key(category_id) references category(category_id)
+)
+insert into Products values(5001,'Cotton Pant', 'C:\ProjectImages\designer-cotton-pant.jpg','Linen',25,1200, 101, 501);
+insert into Products values(5002,'Casual Pant', 'C:\ProjectImages\Casual_Pant.jpg','Buffalo',20,1500, 101, 502);
+insert into Products values(5003,'Casual Shirt', 'C:\ProjectImages\men-casual-shirt.jpg','Raymonds',25,2000, 101, 503);
+insert into Products values(5004,'Kurta', 'C:\ProjectImages\Kurta.jpg','Linen',15,6000, 101, 502);
+insert into Products values(5005,'Top', 'C:\ProjectImages\Women-top.jpg','Levis',30,1400, 102, 501);
+insert into Products values(5006,'Women Dress', 'C:\ProjectImages\WomenDress.jpg','turtle',35, 1500, 102, 503);
+insert into Products values(5007,'Official Shirt', 'C:\ProjectImages\Women-official.jpg','Nike',40,2000, 102, 503);
+insert into Products values(5008,'Tees', 'C:\ProjectImages\CollaredLivInT-shirt-Maroon.jpg','Buffalo',41, 950, 102, 501);
+
+insert into Products values(5009,'Pleated Skirt', 'C:\ProjectImages\Pleated-Skirt.jpg','JNJ',20,2000, 102, 502);
+insert into Products values(5010,'Redmi9 SmartPhone', 'C:\ProjectImages\Redmi9.jpg','MI_India',30, 13000, 103, 503);
+insert into Products values(5011,'Samsung Galaxy', 'C:\ProjectImages\Samsung.jpg','Samsung 6 inch LED',20,35000, 103, 503);
+insert into Products values(5012,'IPhoneX', 'C:\ProjectImages\IPhoneX.jpg','Apple',10,90000, 103, 503);
+insert into Products values(5013,'SamsungTV 32 Inch', 'C:\ProjectImages\SamsungTV.jpg','Samsung',6,40000, 104, 503);
+insert into Products values(5014,'Sony LED TV', 'C:\ProjectImages\MI_TV.jpg','Sony',5,60000, 103, 503);
+
+"				
+				
+				
+				
+				
+				
+				
+				
+WISHLIST				
+				
+"
+drop table wishlist;
+
+
+create table  wishlist(
+WISHLIST_ID number(5) ,
+CUSTOMER_ID number(5) not null,                                                
+PRODUCT_ID number(5) not null,
+constraint wishlist_pk primary key(WISHLIST_ID), 
+constraint customers_fkey foreign key (CUSTOMER_ID) references Customers(Customer_id),
+constraint products_fkey foreign key (PRODUCT_ID) references Products(Product_id)
+)
+
+
+create sequence wishlist_sequence increment by 1 start with 201
+select * from wishlist;
+
+
+
+insert into wishlist values(1001, 5002)
+insert into wishlist values(1002, 5003)
+insert into wishlist values(1004, 5001)
+insert into wishlist values(1002, 5006)"				
+				
+CART				
+"
+drop table cart;
+
+
+create table Cart(
+CART_ID number(4),
+QUANTITY number(4),
+TOTAL_PRICE number(8),
+CUSTOMER_ID number(6),
+PRODUCT_ID number(6),
+constraint cart_pk primary key(CART_ID),
+constraint cart_customer_fk foreign key(CUSTOMER_ID) references Customers(CUSTOMER_ID),
+constraint cart_product_fk foreign key(PRODUCT_ID) references Products(PRODUCT_ID)
+)
+select * from cart;"				
+				
+insert into cart values(101, 2, 2400,  1004, 5001)				
+insert into cart values(102, 1, 1500,  1001, 5006)				
+insert into cart values(103, 2, 2800,  1002, 5005)				
+insert into cart values(104, 1, 13000,  1004, 5010)				
+				
+				
+ADMIN				
+"
+create table ADMIN
+    (
+    Admin_ID number(10) not null,
+    Admin_Name varchar2(20) not null,
+    Password varchar2(20) not null,
+    constraint ADMIN_pk primary key(Admin_ID)
+    );"				
+insert into Admin values(1,'Naveen','Shop@123');				
+				
+				
+RETAILER				
+"drop table retailer
+
+
+select * from retailer
+
+
+create table retailers(
+ retailer_Id number(10),
+ retailer_Name varchar2(20) not null, 
+ email varchar2(20) not null,
+ admin_id number(10), mobile_number number(10) not null,
+ password varchar2(10),
+ constraint retailer_pk primary key(retailer_Id), 
+ constraint admin_fk foreign key(admin_id) references admin(admin_id)
+)
+
+drop sequence retailer_sequence
+
+create sequence retailer_sequence increment by 1 start with 501"				
+"insert into retailer values(501, 'Anish', 'anish@gmail.com', 1,9876543210,'Anish123')
+insert into retailer values(502, 'Naveen', 'naveen@gmail.com', 1,8765432109, 'Nav123')
+insert into retailer values(503, 'LTI', 'lti@gmail.com', 1, 6543210987, 'lti123')
+                                                
+"				
+				
+CATEGORY				
+"
+drop table category
+
+select * from category
+
+create table Category(
+ category_Id number(3),
+ category_name varchar2(20) not null,
+ constraint category_pk primary key(category_id)
+);
+
+
+drop sequence category_sequence
+create sequence category_sequence increment by 1 start with 101;"				
+insert into Category values(101, 'Men clothes')				
+insert into Category values(102, 'Women clothes')				
+insert into Category values(103, 'Mobiles')				
+insert into category values(104, 'TV')				
+				
+				
+				
