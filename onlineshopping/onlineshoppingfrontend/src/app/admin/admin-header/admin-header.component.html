@@ -1,0 +1,35 @@
+
+<div class="container-fluid h-25 border border-primary  p-2">
+    <div class="row ">
+        <div class="col-2 text-center">
+            <span class="badge badge-pill badge-dark" [routerLink]="['/admin-profile']">
+              <h3>Smart Kart</h3>
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+        </div>
+        <div class="col-7"></div>
+        <div class="text-center">
+            <div>
+                    <button class="btn btn-primary" (click)="updateRetailer()">
+                       Add Retailer
+                    </button>&nbsp;
+            
+                    <button class="btn btn-primary" (click)="showAll()">
+                      All Retailer
+                   </button>&nbsp;
+
+              
+                 <button class="btn btn-primary" (click)="showAllProducts()">
+                    Product List
+                 </button>&nbsp;
+
+                   <button class="btn btn-danger" (click)="logoutAdmin()">
+                    Logout 
+                  </button>&nbsp;
+                    
+            
+            </div>
+          </div>
+    </div>
+  </div>
+  

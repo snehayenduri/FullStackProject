@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+
+
+<div class="container">
+    <br>
+    <div class="row">
+      <div class="col-2 align-left" *ngFor="let product of sortedbyProductPrice;">
+          <div class="card">
+              <div class="card-body">
+                      <h5 class="card-title">{{product.productName}}</h5>
+                      <img class="img-responsive"height="150px" width="200px"  src={{product.productImage}} alt="Image">
+                      <p class="card-text "> Price: {{product.productCost}} INR</p>
+                      <button class="btn btn-primary" style="text-align: left" (click)="addToMyCart(product.productId)"> Add to cart </button>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div> 
+
+<app-footer></app-footer>

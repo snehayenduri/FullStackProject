@@ -1,0 +1,44 @@
+
+<app-header></app-header>
+<br>
+<br>
+<div class="grid-container">
+
+    <div class="grid-child">
+        <h5 class="card-title">MEN CLOTHES</h5>
+        <img class="img-responsive" height="150px" width="150px" src="/assets/images/menclothes.jpg" alt="Image">&nbsp;
+        <br>
+        <br>
+        <input type="button" class="btn btn-primary" (click)="menClothes()" value="Explore Men's Collection"/>
+    </div>
+
+    <div class="grid-child">
+        <h5 class="card-title">WOMEN CLOTHES</h5>
+        <img class="img-responsive"height="150px" width="150px" src="/assets/images/womenclothes.jpg" alt="Image">&nbsp;
+        <br>
+        <br>
+        <input type="button" class="btn btn-primary" (click)="womenClothes()" value="Explore Women's Collection"/>
+    </div>
+
+    <div class="grid-child">
+        <h5 class="card-title">TELEVISIONS</h5>
+        <img class="img-responsive"height="150px" width="150px" src="/assets/images/TV.png"  alt="Image">&nbsp;
+        <br>
+        <br> 
+        <input type="button" class="btn btn-primary" (click)="television()" value="Explore Television"/>
+    </div>
+
+    <div class="grid-child">
+        <h5 class="card-title">MOBILES</h5>
+        <img class="img-responsive"height="150px" width="150px" src="/assets/images/mobiles.jpg"  alt="Image">&nbsp;
+        <br>
+        <br>
+        <input type="button" class="btn btn-primary" (click)="mobiles()" value="Explore Mobiles"/>
+    </div>
+  
+</div>
+
+<div>
+<router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,100 @@
+<app-retailer-header></app-retailer-header>
+<div class="background">
+    <div class="container">
+        <div class="row">
+            <div class="offset-2 col-6">
+                <div class="card login shadow p-3 mb-5 bg-white rounded ">
+                    <div class="card-body">
+                        <form [formGroup]="addProductForm" (ngSubmit)="add()">
+                            <h4 style="font-weight: bold;">Add Product Form</h4>
+                            <br>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Product Name : </td>
+                                        <td><input class="form-control" id="productName" type="text"
+                                                formControlName="productName" style="width:200px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Product Brand : </td>
+                                        <td><input type="text" id="productBrand" name="productBrand"
+                                                formControlName="productBrand"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td><label for="categoryId">Category Id : </label></td>
+                                        <td> 
+                                            <select id="categoryId" class="form-control" name="categoryId" formControlName="categoryId">
+                                              <option value=101>Men Clothes</option>
+                                              <option value=102>Women Clothes</option>
+                                              <option value=103>Mobiles</option>
+                                              <option value=104>Telivisons</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>                                        
+                                        <td><label for="retailerId">Retailer Id : </label></td>
+                                            <td><input type="number" id="retailerId" name="retailerId"
+                                                formControlName="retailerId" ></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Product File Location: </td>
+                                        <td><input class="form-control" type="text" id="productImage" placeholder="Enter the url of image"
+                                                formControlName="productImage" name="productImage" style="width:200px">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+
+                            </div>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Quantity : </td>
+                                        <td><input class="form-control" type="number" id="quantity"
+                                                formControlName="quantity" name="quantity" style="width:200px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Product Cost : </td>
+                                        <td><input class="form-control" type="number" id="productCost"
+                                                formControlName="productCost" name="productCost" style="width:200px">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div><br>
+                            <input type="submit" class="btn btn-success" value="Add Product">
+                            &nbsp;&nbsp;<input type="button" class="btn btn-danger" value="Cancel" (click)="return()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+</div>
+<app-retailer-footer></app-retailer-footer>

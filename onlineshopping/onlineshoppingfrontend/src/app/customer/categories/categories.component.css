@@ -1,0 +1,7 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 0fr 2fr;
+    grid-gap: 20px;
+    display: flex;
+    justify-content:center;
+}

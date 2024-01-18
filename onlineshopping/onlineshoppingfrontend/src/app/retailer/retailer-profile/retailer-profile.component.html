@@ -1,0 +1,65 @@
+
+<app-retailer-header></app-retailer-header>
+<br>
+<br>
+<div class="background">
+    <div class="container">
+        <div class="row">
+            <div class="offset-2 col-6">
+                <div class="card login shadow p-3 mb-5 bg-white rounded ">
+                    <div class="card-body">
+                            <h4 style="font-weight: bold;">User Profile</h4>
+                            <br>
+                            <p style="color: rgb(148, 148, 170);font-weight: bold;">Basic Details
+                            <p>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Retailer Name : </td>
+                                        <td>{{retailer.retailerName}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Password : </td>
+                                        <td>{{retailer.password}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <br>
+                            
+                            <p style="color: rgb(179, 179, 206);font-weight: bold;">Contact Details</p>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Email Address : </td>
+                                        <td>{{retailer.emailId}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Mobile Number : </td>
+                                        <td>{{retailer.mobileNumber}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <br>
+                            <input type="button" class="btn btn-primary" value="Close" (click)="close()">
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-retailer-footer></app-retailer-footer>

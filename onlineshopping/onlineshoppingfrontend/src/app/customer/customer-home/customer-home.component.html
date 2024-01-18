@@ -1,0 +1,29 @@
+<app-header></app-header>
+<br>
+<br>
+<div class="buyBtn">
+  <input type="button" class="btn btn-primary" (click)="sortbyName()" value="Sort By Name"/>&nbsp;
+  <input type="button" class="btn btn-primary" (click)="sortbyPriceAsc()" value="Sort By Price- low to high"/>&nbsp;
+  <input type="button" class="btn btn-primary" (click)="sortbyPriceDesc()" value="Sort By Price-High to low"/>&nbsp;
+</div>
+<br/>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-5 align-left" *ngFor="let product of allproductList;">
+        <div class="card">
+            <div class="card-body">
+                    <h5 class="card-title">{{product.productName}}</h5>
+                    <img class="img-responsive" height="150px" width="150px" src={{product.productImage}} alt="Image" >
+                    <p class="card-text "> Price: {{product.productCost}} INR</p>
+                    <button class="btn btn-primary" style="text-align: left" (click)="addToMyCart(product.productId)"> Add to cart </button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+  </div>
+<app-footer></app-footer>

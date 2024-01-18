@@ -1,0 +1,31 @@
+<div class="container-fluid h-25 border border-info rounded .bg-light p-2">
+    <div class="row">
+      <div class="col-2 text-center">
+        <h2>
+          <span class="badge badge-pill badge-dark" [routerLink]="['/retailerProduct']">
+            <h4>SMART-KART</h4>
+            <i class="fas fa-shopping-cart"></i>
+          </span>
+        </h2>
+      </div>
+      <!-- <div class="col-4 p-3 border-5">
+        <div class="form-group">
+          <input type="text" class="form-control" id="" placeholder="Search for products,brand and more " [(ngModel)]="productName"/>
+        </div>
+      </div> -->
+      <!-- ------------Search Button---- -->
+      <!-- <div class="col-1 p-2 mt-2">
+        <button class="btn btn-md btn-outline-dark my-1 my-sm-0" (click)="onSearch()"> Search <i class="fas fa-search"></i></button>
+      </div> -->
+      <!-- ---------------------Login button-------------------- -->
+      <div class="col-5 text-center p-2">
+        <div class="btn-group dropright">
+          <!-- --------------Drop Down Section--- -->
+          <button class="btn btn-md btn-outline-dark "  [routerLink]="['/retailerProduct']">
+           <b> My Products</b><i class="fas fa-shopping-bag"></i>
+          </button>
+          <button class="btn  btn-md btn-outline-dark"  [routerLink]="['/retailerProfile']" >
+            <b> My Profile</b><i class="fas fa-heart"></i>
+          </button>
+          <!--  -->
+          <button class="btn btn-danger" (click)="logout()">Logout</button>

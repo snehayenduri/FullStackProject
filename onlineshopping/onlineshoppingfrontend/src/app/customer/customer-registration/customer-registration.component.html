@@ -1,0 +1,137 @@
+<div class="background">
+    <div class="container">
+        <div class="row">
+            <div class="offset-2 col-6">
+                <div class="card login shadow p-3 mb-5 bg-white rounded ">
+                    <div class="card-body">
+                        <form [formGroup]="registerForm" (ngSubmit)="register()">
+                            <h4 style="font-weight: bold;">Registration Form</h4>
+                            <br>
+                            <p style="color: rgb(179, 179, 206);font-weight: bold;">Basic Details
+                            <p>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Customer Name : </td>
+                                        <td><input type="text" id="customerName" name="customerName"
+                                                formControlName="customerName" placeholder="customerName"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div *ngIf="!customerName?.valid && (customerName?.dirty ||customerName?.touched)">
+                                <div [hidden]="!customerName.errors.required">
+                                    customerName is required
+                                </div>
+                                <div [hidden]="customerName.errors.maxLength">
+                                   Max Length required is 10
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Create Password : </td>
+                                        <td><input class="form-control" id="password" type="text" formControlName="password"
+                                                placeholder="Enter password" style="width:200px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div *ngIf="!password.valid && (password.dirty ||password.touched)">
+                                <div [hidden]="!password.errors.pattern">
+                                  Only alphabets, '_', '@',numbers are allowed
+                                </div>
+                                <div [hidden]="!password.errors.minlength">
+                                    Min Length is 5
+                                  </div>
+                                <div [hidden]="!password.errors.required">
+                                    password is required
+                                </div>
+                                <div [hidden]="password.errors.maxLength">
+                                    Max Length required is 15
+                                 </div>
+                            </div>
+                            <br>
+                            
+                            <p style="color: rgb(179, 179, 206);font-weight: bold;">Contact Details</p>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Email Address : </td>
+                                        <td><input class="form-control" type="email" id="emailAddres" formControlName="emailAddres"
+                                                placeholder="Enter Email Address" style="width:200px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div *ngIf="!emailAddres.valid && (emailAddres.dirty ||emailAddres.touched)">
+                                <div [hidden]="!emailAddres.errors.required">
+                                    emailAddress is required
+                                </div>                               
+                                <div [hidden]="!emailAddres.errors.pattern">
+                                    should be of form xyz@gmail.com
+                                </div>
+                                <div [hidden]="emailAddres.errors.maxLength">
+                                    Max Length required is 15
+                                 </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Mobile Number : </td>
+                                        <td><input class="form-control" type="number" id="mobileNumber" formControlName="mobileNumber"
+                                                placeholder="Enter Mobile Number" style="width:200px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div *ngIf="!mobileNumber.valid && (mobileNumber.dirty ||mobileNumber.touched)">
+                                <div [hidden]="!mobileNumber.errors.required">
+                                    mobile number is required
+                                </div> 
+                                <div [hidden]="!mobileNumber.errors.pattern">
+                                    enter a valid mobile number
+                                </div> 
+                            </div>
+                            <br>
+                            <p style="color: rgb(179, 179, 206);font-weight: bold;">Address
+                            <p>
+                            <div class="form-group">
+                                <input class="form-control" type="text" formControlName="doorNo"
+                                    placeholder="Enter door number" style="width:200px">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" formControlName="street"
+                                    placeholder="Enter street" style="width:200px">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" formControlName="city" placeholder="Enter city"
+                                    style="width:200px">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" formControlName="state"
+                                    placeholder="Enter state" style="width:200px">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" formControlName="country"
+                                    placeholder="Enter country" style="width:200px">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" formControlName="pincode"
+                                    placeholder="Enter pincode" style="width:200px">
+                            </div><br>
+                            <div *ngIf="!pincode.valid && (pincode.dirty ||pincode.touched)">
+                                <div [hidden]="!pincode.errors.required">
+                                    pincode is required
+                                </div> 
+                            </div>
+                            <input type="submit" class="btn btn-success" value="Register">
+                            &nbsp;&nbsp;<input type="button" class="btn btn-primary" value="Existing User?"
+                                (click)="login()">
+                            &nbsp;&nbsp;<input type="reset" class="btn btn-primary" value="Reset">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>

@@ -1,0 +1,104 @@
+<div class="background">
+    <div class="container">
+        <div class="row">
+            <div class="offset-2 col-6">
+                <div class="card login shadow p-3 mb-5 bg-white rounded ">
+                    <div class="card-body">
+                        <form [formGroup]="updateProductForm" (ngSubmit)="update()">
+                            <h4 style="font-weight: bold;">Update Product Form</h4>
+                            <br>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Product Id : </td>
+                                        <td><input type="number" id="productId" name="productId" formControlName="productId"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Product Name : </td>
+                                        <td><input class="form-control" id="productName" type="text"
+                                                formControlName="productName" style="width:200px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Product Brand : </td>
+                                        <td><input type="number" id="productBrand" name="productBrand"
+                                                formControlName="productBrand"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Category Id : </td>
+                                        <td><input type="number" id="categoryId" name="categoryId"
+                                                formControlName="categoryId"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Retailer Id : </td>
+                                        <td><input class="form-control" type="number" id="retailerId"
+                                                formControlName="retailerId" name="retailerId" style="width:200px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Product File : </td>
+                                        <td><input class="form-control" type="text" id="productImage"
+                                                formControlName="productImage" name="productImage" style="width:200px">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group">
+
+                            </div>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Quantity : </td>
+                                        <td><input class="form-control" type="number" id="quantity"
+                                                formControlName="quantity" name="quantity" style="width:200px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td>Product Cost : </td>
+                                        <td><input class="form-control" type="number" id="productCost"
+                                                formControlName="productCost" name="productCost" style="width:200px">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div><br>
+                            <input type="submit" class="btn btn-success" value="Update">
+                            &nbsp;&nbsp;<input type="button" class="btn btn-danger" value="Cancel" (click)="return()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+</div> 
+
+update

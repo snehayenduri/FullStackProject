@@ -1,0 +1,9 @@
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(75, 173, 177);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
+ 

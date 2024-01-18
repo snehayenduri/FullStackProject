@@ -1,0 +1,14 @@
+.background{
+    background-image:  url(src\assets\images\Login.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;    
+    margin-left: 0%;
+    height: 600px;
+}
+
+.row{
+    padding-top: 130px;
+    padding-left: 100px;
+    color: white;
+}
